@@ -175,46 +175,42 @@ Status: 200 OK
 ```
 
 ```
-{
-    "data": {
-        "id": null,
-        "type": "forecast",
-        "attributes": {
-            "current_weather": {
-                "datetime": "2021-09-28 13:31:36 -0700",
-                "conditions": "clear sky",
-                "temperature": 89.9,
-                "humidity": 36,
-                "feels_like": 89.3,
-                "uvi": 5.43,
-                "visibility": 10000,
-                "sunrise": "2021-09-28 06:29:56 -0700",
-                "sunset": "2021-09-28 18:25:47 -0700"
+{ 
+"data": {
+     "posts": [
+           {
+              "id": "42",
+              "name": "Example Name",
+              "company": "Example Company",
+              "salary": 100_000,
+              "previousEducation": "Four Year Degree",
+              "bootCampType": 1,
+              "devTitle": "Software Engineer",
+              "comments": "Any Comments that the Poster may have",
+              "state": "Colorado",
+              "jobHuntDuration": 1,
+              "gender": "Female",
+              "age": 29,
+              "yearsOfExperience": 1
             },
-            "daily_weather": [
-                {
-                    "date": "2021-09-29",
-                    "sunrise": "2021-09-29 06:30:40 -0700",
-                    "sunset": "2021-09-29 18:24:22 -0700",
-                    "max_temp": 86.7,
-                    "min_temp": 72.3,
-                    "conditions": "overcast clouds",
-                    "icon": "http://openweathermap.org/img/w/04d.png"
-                },
-                { ... }
-            ],
-            "hourly_weather": [
-                {
-                    "time": "14:00:00",
-                    "temperature": 89.9,
-                    "conditions": "clear sky",
-                    "icon": "http://openweathermap.org/img/w/01d.png"
-                },
-                { ... }
-            ]
-        }
-    }
-}
+            {
+              "id": "43",
+              "name": "Another Example Name",
+              "company": "Another Example Company",
+              "salary": 120_000,
+              "previousEducation": "No Degree",
+              "bootCampType": 1,
+              "devTitle": "Software Engineer",
+              "comments": "Any Comments that the Poster may have",
+              "state": "California",
+              "jobHuntDuration": 1,
+              "gender": "Male",
+              "age": 26,
+              "yearsOfExperience": 0
+              }
+          ]
+      }
+  }
 ```
 
 ---
@@ -224,16 +220,11 @@ Status: 200 OK
 <!-- CONTRIBUTING -->
 ## Mutations
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+HTTP Verb | Endpoint      | Type              | Description                              | Link
+----------|---------------|-------------------|------------------------------------------|---------------------------
+POST      | `/graphql`    | `Posts`           | Get the forecast for a location          | [Link](#posts)
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+---
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
