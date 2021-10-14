@@ -117,7 +117,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 HTTP Verb | Endpoint      | Type              | Description                              | Link
 ----------|---------------|-------------------|------------------------------------------|---------------------------
-POST      | `/graphql`    | `Posts`           | Get the forecast for a location          | [Link](#posts)
+POST      | `/graphql`    | `Posts`           | Get All Posts          | [Link](#posts)
 
 ---
 
@@ -153,7 +153,7 @@ Name        | Data Type | Description
 ------------|-----------|-------------------
 `id`        | BigInt    | ID of Record
 `name`      | String    | Name of person who created the post (if available)
-`company`      | String    | Name of company the poster received a job with
+`company`      | String    | Name of company the poster received a job with (if available)
 `salary`      | String    | Starting salary of the position
 `previousEducation`      | String    | Poster's highest education
 `bootCampType`      | String    | In person, virtual, or a hybrid of both
