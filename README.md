@@ -115,13 +115,109 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Queries
 
-HTTP Verb | Endpoint              | Description                              | Link
-----------|-----------------------|------------------------------------------|---------------------------
-POST      | `/graphql`            | Get the forecast for a location          | [Link](#get-forecast)
+HTTP Verb | Endpoint      | Type              | Description                              | Link
+----------|---------------|-------------------|------------------------------------------|---------------------------
+POST      | `/graphql`    | `Posts`           | Get the forecast for a location          | [Link](#posts)
 
 ---
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+### Posts
+
+Returns all Posts and any attributes included in the query.
+
+```graphql
+    query {
+      posts {
+        id
+        name
+        company
+        salary
+        previousEducation
+        bootCampType
+        devTitle
+        comments
+        state
+        jobHuntDuration
+        gender
+        age
+        yearsOfExperience
+      }
+    }
+```
+
+### Query Attributes
+
+Name        | Data Type | Description
+------------|-----------|-------------------
+`id`        | BigInt    | ID of Record
+`name`      | String    | Name of person who created the post (if available)
+`company`      | String    | Name of person who created the post (if available)
+`salary`      | String    | Name of person who created the post (if available)
+`previousEducation`      | String    | Name of person who created the post (if available)
+`bootCampType`      | String    | Name of person who created the post (if available)
+`devTitle`      | String    | Name of person who created the post (if available)
+`state`      | String    | Name of person who created the post (if available)
+`jobHuntDuration`      | String    | Name of person who created the post (if available)
+`gender`      | String    | Name of person who created the post (if available)
+`age`      | String    | Name of person who created the post (if available)
+`yearsOfExperience`      | String    | Name of person who created the post (if available)
+`comments`      | String    | Name of person who created the post (if available)
+
+Notes: 
+Units is an optional parameter. The default response will be in imperial units. To return metric values, include metric with the key units in params
+
+### Example Response
+
+```
+Status: 200 OK
+```
+
+```
+{
+    "data": {
+        "id": null,
+        "type": "forecast",
+        "attributes": {
+            "current_weather": {
+                "datetime": "2021-09-28 13:31:36 -0700",
+                "conditions": "clear sky",
+                "temperature": 89.9,
+                "humidity": 36,
+                "feels_like": 89.3,
+                "uvi": 5.43,
+                "visibility": 10000,
+                "sunrise": "2021-09-28 06:29:56 -0700",
+                "sunset": "2021-09-28 18:25:47 -0700"
+            },
+            "daily_weather": [
+                {
+                    "date": "2021-09-29",
+                    "sunrise": "2021-09-29 06:30:40 -0700",
+                    "sunset": "2021-09-29 18:24:22 -0700",
+                    "max_temp": 86.7,
+                    "min_temp": 72.3,
+                    "conditions": "overcast clouds",
+                    "icon": "http://openweathermap.org/img/w/04d.png"
+                },
+                { ... }
+            ],
+            "hourly_weather": [
+                {
+                    "time": "14:00:00",
+                    "temperature": 89.9,
+                    "conditions": "clear sky",
+                    "icon": "http://openweathermap.org/img/w/01d.png"
+                },
+                { ... }
+            ]
+        }
+    }
+}
+```
+
+---
 
 
 
