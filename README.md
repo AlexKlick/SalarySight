@@ -153,20 +153,17 @@ Name        | Data Type | Description
 ------------|-----------|-------------------
 `id`        | BigInt    | ID of Record
 `name`      | String    | Name of person who created the post (if available)
-`company`      | String    | Name of person who created the post (if available)
-`salary`      | String    | Name of person who created the post (if available)
-`previousEducation`      | String    | Name of person who created the post (if available)
-`bootCampType`      | String    | Name of person who created the post (if available)
-`devTitle`      | String    | Name of person who created the post (if available)
-`state`      | String    | Name of person who created the post (if available)
-`jobHuntDuration`      | String    | Name of person who created the post (if available)
-`gender`      | String    | Name of person who created the post (if available)
-`age`      | String    | Name of person who created the post (if available)
-`yearsOfExperience`      | String    | Name of person who created the post (if available)
-`comments`      | String    | Name of person who created the post (if available)
-
-Notes: 
-Units is an optional parameter. The default response will be in imperial units. To return metric values, include metric with the key units in params
+`company`      | String    | Name of company the poster received a job with
+`salary`      | String    | Starting salary of the position
+`previousEducation`      | String    | Poster's highest education
+`bootCampType`      | String    | In person, virtual, or a hybrid of both
+`devTitle`      | String    | Title of the position
+`state`      | String    | State in which the postion was acquired
+`jobHuntDuration`      | String    | Length in time it took Poster to receive a position
+`gender`      | String    | Gender of Poster (Male, Female, Transgender, Non-binary/non-conforming, other, prefer not to say)
+`age`      | String    | Age of Poster
+`yearsOfExperience`      | String    | Years of Experience for position
+`comments`      | String    | Any Comments poster wishes to share with dev team
 
 ### Example Response
 
@@ -174,7 +171,7 @@ Units is an optional parameter. The default response will be in imperial units. 
 Status: 200 OK
 ```
 
-```
+```json
 { 
 "data": {
      "posts": [
