@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/SalarySight">
-    <img src="https://user-images.githubusercontent.com/80132364/137375953-5d3e2034-ce5a-403b-94c9-3dd16f804c73.png" alt="Logo" width="80" height="80">
+    <img src="https://user-images.githubusercontent.com/80132364/137375953-5d3e2034-ce5a-403b-94c9-3dd16f804c73.png" alt="Logo" width="120" height="120">
   </a>
 
   <h3 align="center">SalarySight</h3>
