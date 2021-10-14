@@ -36,9 +36,8 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#queries">Queries</a></li>
+    <li><a href="#mutations">Mutations</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -74,25 +73,22 @@ Gems used to to build this application:
 ### Prerequisites
 
 In order to run this application locally, you will need 
-* npm
-  ```ruby
-  install npm@latest -g
-  ```
+* rails 5.2.6
+* ruby 2.7.2
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```ruby
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone git@github.com:SalarySight/SalarySight-BE.git
    ```
-3. Install NPM packages
+2. Change directory
    ```ruby
-   npm install
+   cd SalarySight
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Install gems
+   ```ruby
+   bundle install
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -111,24 +107,20 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 <!-- ROADMAP -->
-## Roadmap
+## Queries
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [] Add Additional Templates w/ Examples
-- [] Add "components" document to easily copy & paste sections of the readme
-- [] Multi-language Support
-    - [] Chinese
-    - [] Spanish
+HTTP Verb | Endpoint              | Description                              | Link
+----------|-----------------------|------------------------------------------|---------------------------
+POST      | `/graphql`            | Get the forecast for a location          | [Link](#get-forecast)
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+---
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Mutations
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -142,16 +134,6 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
