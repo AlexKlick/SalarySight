@@ -92,10 +92,10 @@ In order to run this application locally, you will need
    bundle install
    ```
 4. Create local DB
-  ```
-  rails db:create
-  rails db:migrate
-  ```
+   ```
+   rails db:create
+   rails db:migrate
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
