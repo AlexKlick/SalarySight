@@ -75,21 +75,27 @@ Gems used to to build this application:
 In order to run this application locally, you will need 
 * rails 5.2.6
 * ruby 2.7.2
+* [PostgreSQL](https://www.postgresql.org/docs/9.5/functions-aggregate.html)
 
 ### Installation
 
 1. Clone the repo
-   ```ruby
+   ```
    git clone git@github.com:SalarySight/SalarySight-BE.git
    ```
 2. Change directory
-   ```ruby
+   ```
    cd SalarySight
    ```
 3. Install gems
-   ```ruby
+   ```
    bundle install
    ```
+4. Create local DB
+  ```
+  rails db:create
+  rails db:migrate
+  ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
