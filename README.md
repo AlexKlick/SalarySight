@@ -158,7 +158,7 @@ Name        | Data Type | Description
 `previousEducation`      | String    | Poster's highest education
 `bootCampType`      | Integer  | In person, virtual, or a hybrid of both
 `devTitle`      | String    | Title of the position
-`state`      | String    | State in which the postion was acquired
+`state`      | String    | State in which the position was acquired
 `jobHuntDuration`      | Integer    | Length in time it took Poster to receive a position
 `gender`      | Integer    | Gender of Poster (Male, Female, Transgender, Non-binary/non-conforming, other, prefer not to say)
 `age`      | Integer    | Age of Poster
