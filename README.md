@@ -186,7 +186,7 @@ Status: 200 OK
               "comments": "Any Comments that the Poster may have",
               "state": "Colorado",
               "jobHuntDuration": 1,
-              "gender": "Female",
+              "gender": 0,
               "age": 29,
               "yearsOfExperience": 1
             },
@@ -201,7 +201,7 @@ Status: 200 OK
               "comments": "Any Comments that the Poster may have",
               "state": "California",
               "jobHuntDuration": 1,
-              "gender": "Male",
+              "gender": 1,
               "age": 26,
               "yearsOfExperience": 0
               }
