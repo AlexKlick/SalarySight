@@ -204,10 +204,10 @@ Status: 200 OK
               "gender": 1,
               "age": 26,
               "yearsOfExperience": 0
-              }
-          ]
-      }
-  }
+             }
+         ]
+     }
+ }
 ```
 
 ---
