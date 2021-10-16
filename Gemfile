@@ -17,6 +17,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'factory_bot_rails'
 gem 'faker'
 gem 'graphql'
+gem 'rack-cors'
 
 group :development, :test do
   gem 'graphiql-rails'
