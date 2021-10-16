@@ -1,13 +1,13 @@
 FactoryBot.define do
   factory :post do
-    name { "MyString" }
-    company { "MyString" }
-    salary { 1 }
-    previous_education { "MyString" }
+    name { Faker::Name.name }
+    company { Faker::Company.name }
+    salary { Faker::Number.between(from: 60000, to: 100000) }
+    previous_education { "Four Year Degree" }
     boot_camp_type { 1 }
-    dev_title { "MyString" }
-    comments { "MyText" }
-    state { "MyString" }
+    dev_title { Faker::Job.title  }
+    comments { Faker::ChuckNorris.fact }
+    state { Faker::Address.state }
     job_hunt_duration { 1 }
     gender { 1 }
     age { 1 }
