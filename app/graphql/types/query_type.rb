@@ -5,9 +5,15 @@ module Types
     include GraphQL::Types::Relay::HasNodesField
 
     field :posts, [Types::PostType], null: false
+    field :user, Types::UserType, null: false do
+      argument :id, Integer, required: true
+    end
 
     def posts
       Post.all
+    end
+    def user(id:)
+      User.find(id)
     end
   end
 end
