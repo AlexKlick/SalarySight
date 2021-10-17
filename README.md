@@ -248,7 +248,7 @@ Status: 200 OK
 "data": {
      "user": {
           "nickname": "example nickname",
-          "email": "example email",
+          "email": "example@email.com",
           "imageUrl": "https://exampleurl.com/example.jpeg",
           "token": "examplegithubtoken"
      }
@@ -277,8 +277,8 @@ Returns all Posts and any attributes included in the query.
     mutation {
       CreateUser(input: {
         nickname: "example name"
-        email: "example email"
-        imageUrl: "example.example.com"
+        email: "example@email.com"
+        imageUrl: "https://exampleurl.com/example.jpeg"
         token: "examplegithubtoken"
       }) {
         user {
@@ -312,7 +312,7 @@ Status: 200 OK
     "createUser": {
        "user": {  
           "nickname": "example nickname",
-          "email": "example email",
+          "email": "example@email.com",
           "imageUrl": "https://exampleurl.com/example.jpeg",
           "token": "examplegithubtoken"
          }
