@@ -310,12 +310,12 @@ Status: 200 OK
 { 
 "data": {
     "createUser": {
-      "user": {  
+       "user": {  
           "nickname": "example nickname",
           "email": "example email",
           "imageUrl": "https://exampleurl.com/example.jpeg",
           "token": "examplegithubtoken"
-          }
+         }
      }
  }
 ```
