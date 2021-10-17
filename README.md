@@ -118,6 +118,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 HTTP Verb | Endpoint      | Type              | Description                              | Link
 ----------|---------------|-------------------|------------------------------------------|---------------------------
 POST      | `/graphql`    | `Posts`           | Get All Posts          | [Link](#posts)
+POST      | `/graphql`    | `User`            | Get One User           | [Link](#user)
 
 ---
 
@@ -212,6 +213,49 @@ Status: 200 OK
 
 ---
 
+### User
+
+Returns one user with the user's id as an argument.
+
+```graphql
+    query {
+      user(id: <user-id>) {
+        nickname
+        email
+        imageUrl
+        token
+      }
+    }
+```
+
+### Query Attributes
+
+Name        | Data Type | Description
+------------|-----------|-------------------
+`nickname`      | String    | GitHub Users Account Nickname
+`email`      | String    | Email of GitHub User
+`imageUrl`      | String    | Image URL of GitHub User's Account
+`token`      | String    | Token from GitHub Response
+
+### Example Response
+
+```
+Status: 200 OK
+```
+
+```json
+{ 
+"data": {
+     "user": {
+          "nickname": "example nickname",
+          "email": "example email",
+          "imageUrl": "https://exampleurl.com/example.jpeg",
+          "token": "examplegithubtoken"
+     }
+ }
+```
+---
+
 
 
 <!-- CONTRIBUTING -->
@@ -219,11 +263,63 @@ Status: 200 OK
 
 HTTP Verb | Endpoint      | Type              | Description                              | Link
 ----------|---------------|-------------------|------------------------------------------|---------------------------
-POST      | `/graphql`    | `Posts`           | Get the forecast for a location          | [Link](#posts)
+POST      | `/graphql`    | `createUser`      | Create a New User                        | [Link](#create-user)
 
 ---
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+### Create User
+
+Returns all Posts and any attributes included in the query.
+
+```graphql
+    mutation {
+      CreateUser(input: {
+        nickname: "example name"
+        email: "example email"
+        imageUrl: "example.example.com"
+        token: "examplegithubtoken"
+      }) {
+        user {
+         nickname
+         email
+         imageUrl
+         token
+         }
+     }
+}
+```
+ 
+### Query Attributes
+
+Name        | Data Type | Description
+------------|-----------|-------------------
+`nickname`      | String    | GitHub Users Account Nickname
+`email`      | String    | Email of GitHub User
+`imageUrl`      | String    | Image URL of GitHub User's Account
+`token`      | String    | Token from GitHub Response
+
+### Example Response
+
+```
+Status: 200 OK
+```
+
+```json
+{ 
+"data": {
+    "createUser": {
+      "user": {  
+          "nickname": "example nickname",
+          "email": "example email",
+          "imageUrl": "https://exampleurl.com/example.jpeg",
+          "token": "examplegithubtoken"
+          }
+     }
+ }
+```
+---
 
 
 <!-- CONTACT -->
