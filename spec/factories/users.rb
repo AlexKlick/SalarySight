@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :user do
-    nickname { "MyString" }
-    email { "MyString" }
-    image_url { "MyString" }
-    token { "MyString" }
+    nickname { Faker::Name.name   }
+    email { Faker::Internet.email }
+    image_url { Faker::Internet.url  }
+    token { Faker::String.random(length: 24) }
   end
 end
