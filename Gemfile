@@ -18,6 +18,7 @@ gem 'factory_bot_rails'
 gem 'faker'
 gem 'graphql'
 gem 'rack-cors'
+gem 'figaro'
 
 group :development, :test do
   gem 'graphiql-rails'
