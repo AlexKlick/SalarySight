@@ -1,26 +1,26 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/models/user.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/models/user.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/models/application_record.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/models/post.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/models/post.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/salary_sight_schema.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/salary_sight_schema.rb": {
         "lines": [
           1,
           1,
@@ -55,7 +55,7 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/mutation_type.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/mutation_type.rb": {
         "lines": [
           1,
           1,
@@ -64,7 +64,7 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/base_object.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/base_object.rb": {
         "lines": [
           1,
           1,
@@ -75,17 +75,7 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/base_edge.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/base_connection.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/base_edge.rb": {
         "lines": [
           1,
           1,
@@ -95,7 +85,17 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/base_field.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/base_connection.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/base_field.rb": {
         "lines": [
           1,
           1,
@@ -104,7 +104,7 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/base_argument.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/base_argument.rb": {
         "lines": [
           1,
           1,
@@ -112,7 +112,7 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/mutations/create_user.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/mutations/create_user.rb": {
         "lines": [
           1,
           1,
@@ -141,7 +141,7 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/mutations/base_mutation.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/mutations/base_mutation.rb": {
         "lines": [
           1,
           1,
@@ -153,7 +153,7 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/base_input_object.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/base_input_object.rb": {
         "lines": [
           1,
           1,
@@ -162,7 +162,7 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/user_type.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/user_type.rb": {
         "lines": [
           1,
           1,
@@ -176,7 +176,7 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/query_type.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/query_type.rb": {
         "lines": [
           1,
           1,
@@ -193,13 +193,13 @@
           1,
           null,
           1,
-          0,
+          1,
           null,
           null,
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/post_type.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/post_type.rb": {
         "lines": [
           1,
           1,
@@ -220,7 +220,7 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/controllers/graphql_controller.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/controllers/graphql_controller.rb": {
         "lines": [
           1,
           null,
@@ -229,37 +229,37 @@
           null,
           null,
           1,
-          1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
+          2,
           null,
           null,
           null,
-          1,
-          1,
-          null,
-          0,
-          0,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
+          2,
+          2,
           null,
           0,
           0,
           null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
           null,
           1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          2,
           null,
           0,
           null,
@@ -274,13 +274,13 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/controllers/application_controller.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/mailers/application_mailer.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/mailers/application_mailer.rb": {
         "lines": [
           0,
           0,
@@ -290,33 +290,8 @@
         "branches": {
         }
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/node_type.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/node_type.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/base_enum.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/base_interface.rb": {
-        "lines": [
-          0,
-          0,
           0,
           0,
           0,
@@ -328,7 +303,7 @@
         "branches": {
         }
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/base_scalar.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/base_enum.rb": {
         "lines": [
           0,
           0,
@@ -338,7 +313,32 @@
         "branches": {
         }
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/graphql/types/base_union.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/base_interface.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/base_scalar.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/base_union.rb": {
         "lines": [
           0,
           0,
@@ -350,7 +350,7 @@
         "branches": {
         }
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/jobs/application_job.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/jobs/application_job.rb": {
         "lines": [
           0,
           0
@@ -358,7 +358,7 @@
         "branches": {
         }
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/channels/application_cable/connection.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -368,7 +368,7 @@
         "branches": {
         }
       },
-      "/Users/alexmac/Documents/turing/mod_4/SalarySight-BE/app/channels/application_cable/channel.rb": {
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -379,6 +379,6 @@
         }
       }
     },
-    "timestamp": 1634427517
+    "timestamp": 1634430319
   }
 }
