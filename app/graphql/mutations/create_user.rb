@@ -9,14 +9,16 @@ module Mutations
     field :errors, [String], null: false
 
     def resolve(nickname:, email:, image_url:, token:)
-      user = User.create(nickname: nickname, email: email, image_url: image_url, token: token)
+      user = User.find_or_create_by(email: email)
+      user.update(nickname: nickname, image_url: image_url, token: token)
+
       if user.save
         {
           user: user
         }
       else
         {
-          user: nil, 
+          user: nil,
           errors: user.errors.full_messages
         }
       end
