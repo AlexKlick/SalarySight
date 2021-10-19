@@ -261,9 +261,10 @@ Status: 200 OK
 <!-- CONTRIBUTING -->
 ## Mutations
 
-HTTP Verb | Endpoint      | Type              | Description                              | Link
+HTTP Verb | Endpoint      | Mutation          | Description                              | Link
 ----------|---------------|-------------------|------------------------------------------|---------------------------
 POST      | `/graphql`    | `createUser`      | Create a New User                        | [Link](#create-user)
+POST      | `/graphql`    | `createPost`      | Create a New Post                        | [Link](#create-post)
 
 ---
 
@@ -271,24 +272,92 @@ POST      | `/graphql`    | `createUser`      | Create a New User               
 
 ### Create User
 
-Returns all Posts and any attributes included in the query.
+Create a new user with a GitHub authentication code. 
 
 ```graphql
     mutation {
       CreateUser(input: {
-        nickname: "example name"
-        email: "example@email.com"
-        imageUrl: "https://exampleurl.com/example.jpeg"
-        token: "examplegithubtoken"
+        code: <github-code>
       }) {
         user {
+         id
          nickname
-         email
          imageUrl
          token
          }
      }
 }
+```
+ 
+### Query Attributes
+
+Name        | Data Type | Description
+------------|-----------|-------------------
+`id`        | BigInt    | User ID
+`nickname`      | String    | GitHub Users Account Nickname
+`imageUrl`      | String    | Image URL of GitHub User's Account
+`token`      | String    | Token from GitHub Response
+
+### Example Response
+
+```
+Status: 200 OK
+```
+
+```json
+{ 
+"data": {
+    "createUser": {
+       "user": {  
+          "id": 4
+          "nickname": "example nickname",
+          "imageUrl": "https://exampleurl.com/example.jpeg",
+          "token": "examplegithubtoken"
+         }
+     }
+ }
+```
+---
+
+### Create Post
+
+Creates a new salary post.
+
+```graphql
+     mutation {
+      createPost(input: {
+        company: "Example Company"
+        salary: 100000
+        previousEducation: "Four Year Degree"
+        devTitle: "Staff Engineer"
+        state: "Colorado"
+        jobHuntDuration: 1
+        gender: 1
+        age: 29
+        yearsOfExperience: 2
+        yearGraduated: "2019"
+        typeOfEmployment: "Full Time"
+        locationOfEmployment: "Denver"
+        negotiation: 1
+        userId: <user-id>
+        }) {
+          post{
+            company
+            salary
+            previousEducation
+            devTitle
+            state
+            jobHuntDuration
+            gender
+            age
+            yearsOfExperience
+            yearGraduated
+            typeOfEmployment
+            locationOfEmployment
+            negotiation
+          }
+        }
+      }
 ```
  
 ### Query Attributes
@@ -307,16 +376,26 @@ Status: 200 OK
 ```
 
 ```json
-{ 
-"data": {
-    "createUser": {
-       "user": {  
-          "nickname": "example nickname",
-          "email": "example@email.com",
-          "imageUrl": "https://exampleurl.com/example.jpeg",
-          "token": "examplegithubtoken"
-         }
-     }
+{
+  "data": {
+      "createPost": {
+        "post": {
+          "company": "Example Company",
+          "salary: 100000,
+          "previousEducation": "Four Year Degree",
+          "devTitle": "Staff Engineer",
+          "state": "Colorado",
+          "jobHuntDuration": 1,
+          "gender": 1,
+          "age": 29,
+          "yearsOfExperience": 2,
+          "yearGraduated": 2019,
+          "typeOfEmployment": 0,
+          "locationOfEmployment": 0,
+          "negotiation": 1
+          }
+       }
+    }
  }
 ```
 ---
