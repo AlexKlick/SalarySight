@@ -132,18 +132,19 @@ Returns all Posts and any attributes included in the query.
     query {
       posts {
         id
-        name
         company
         salary
         previousEducation
-        bootCampType
         devTitle
-        comments
         state
         jobHuntDuration
         gender
         age
         yearsOfExperience
+        yearGraduated
+        typeOfEmployment
+        locationOfEmployment
+        negotiation
       }
     }
 ```
@@ -153,18 +154,20 @@ Returns all Posts and any attributes included in the query.
 Name        | Data Type | Description
 ------------|-----------|-------------------
 `id`        | BigInt    | ID of Record
-`name`      | String    | Name of person who created the post (if available)
 `company`      | String    | Name of company the poster received a job with (if available)
 `salary`      | Integer    | Starting salary of the position
 `previousEducation`      | String    | Poster's highest education
-`bootCampType`      | Integer  | In person, virtual, or a hybrid of both
 `devTitle`      | String    | Title of the position
 `state`      | String    | State in which the position was acquired
 `jobHuntDuration`      | Integer    | Length in time it took Poster to receive a position
 `gender`      | Integer    | Gender of Poster (Male, Female, Transgender, Non-binary/non-conforming, other, prefer not to say)
 `age`      | Integer    | Age of Poster
 `yearsOfExperience`      | Integer    | Years of Experience for position
-`comments`      | Text    | Any Comments poster wishes to share with dev team
+`yearGraduated`      | String  | Year the Poster graduated
+`typeOfEmployment`      | String  | Type of employment received (i.e. full time)
+`locationOfEmployment`      | String  | Location of Position received
+`negotiation`      | Integer  | Yes or No for negotiating offer received
+
 
 ### Example Response
 
@@ -178,33 +181,36 @@ Status: 200 OK
      "posts": [
            {
               "id": "42",
-              "name": "Example Name",
               "company": "Example Company",
               "salary": 100000,
               "previousEducation": "Four Year Degree",
               "bootCampType": 1,
               "devTitle": "Software Engineer",
-              "comments": "Any Comments that the Poster may have",
               "state": "Colorado",
               "jobHuntDuration": 1,
               "gender": 0,
               "age": 29,
               "yearsOfExperience": 1
+              "yearGraduated": "2019"
+              "typeOfEmployment": "Full Time"
+              "locationOfEmployment": "Denver"
+              "negotiation": 1
             },
             {
               "id": "43",
-              "name": "Another Example Name",
               "company": "Another Example Company",
               "salary": 120000,
               "previousEducation": "No Degree",
-              "bootCampType": 1,
               "devTitle": "Software Engineer",
-              "comments": "Any Comments that the Poster may have",
               "state": "California",
               "jobHuntDuration": 1,
               "gender": 1,
               "age": 26,
               "yearsOfExperience": 0
+              "yearGraduated": "2020"
+              "typeOfEmployment": "Full Time"
+              "locationOfEmployment": "Salt Lake"
+              "negotiation": 0
              }
          ]
      }
