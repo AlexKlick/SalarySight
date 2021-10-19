@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/user
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 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
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 19 Oct 2021 01:04:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - W/"816b11a782792a2b46c5146e01342f67ba04d14df682298444951fe1990cfd45"
+      Last-Modified:
+      - Sat, 16 Oct 2021 21:57:22 GMT
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Oauth-Client-Id:
+      - 03061f342b90340a4ce6
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4996'
+      X-Ratelimit-Reset:
+      - '1634607484'
+      X-Ratelimit-Used:
+      - '4'
+      X-Ratelimit-Resource:
+      - core
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation,
+        Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - '0'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - CF00:5A19:ECA9E5:FD67C3:616E19AE
+    body:
+      encoding: ASCII-8BIT
+      string: '{"login":"matttoensing","id":80132364,"node_id":"MDQ6VXNlcjgwMTMyMzY0","avatar_url":"https://avatars.githubusercontent.com/u/80132364?v=4","gravatar_id":"","url":"https://api.github.com/users/matttoensing","html_url":"https://github.com/matttoensing","followers_url":"https://api.github.com/users/matttoensing/followers","following_url":"https://api.github.com/users/matttoensing/following{/other_user}","gists_url":"https://api.github.com/users/matttoensing/gists{/gist_id}","starred_url":"https://api.github.com/users/matttoensing/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/matttoensing/subscriptions","organizations_url":"https://api.github.com/users/matttoensing/orgs","repos_url":"https://api.github.com/users/matttoensing/repos","events_url":"https://api.github.com/users/matttoensing/events{/privacy}","received_events_url":"https://api.github.com/users/matttoensing/received_events","type":"User","site_admin":false,"name":"Matt
+        Toensing","company":null,"blog":"","location":"Denver, CO","email":null,"hireable":null,"bio":"BE
+        Engineer","twitter_username":null,"public_repos":39,"public_gists":4,"followers":4,"following":2,"created_at":"2021-03-05T22:29:29Z","updated_at":"2021-10-16T21:57:22Z"}'
+  recorded_at: Tue, 19 Oct 2021 01:04:46 GMT
+recorded_with: VCR 6.0.0
