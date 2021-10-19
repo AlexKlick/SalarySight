@@ -10,19 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_16_224738) do
+ActiveRecord::Schema.define(version: 2021_10_19_014917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "posts", force: :cascade do |t|
-    t.string "name"
     t.string "company"
     t.integer "salary"
     t.string "previous_education"
-    t.integer "boot_camp_type"
     t.string "dev_title"
-    t.text "comments"
     t.string "state"
     t.integer "job_hunt_duration"
     t.integer "gender"
@@ -30,6 +27,12 @@ ActiveRecord::Schema.define(version: 2021_10_16_224738) do
     t.integer "years_of_experience"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "year_graduated"
+    t.string "type_of_employment"
+    t.string "location_of_employment"
+    t.integer "negotiation"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,4 +44,5 @@ ActiveRecord::Schema.define(version: 2021_10_16_224738) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "posts", "users"
 end
