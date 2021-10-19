@@ -5,6 +5,9 @@ RSpec.describe 'User create', type: :request do
 
     it 'creates new user' do
       post '/graphql', params:{ query: mutation }
+      
+      expect(response).to be_successful
+
       user = JSON.parse(response.body, symbolize_names: true)
 
       expect(user[:data][:createUser][:user]).to have_key(:nickname)

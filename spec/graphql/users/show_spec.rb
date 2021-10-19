@@ -9,6 +9,8 @@ RSpec.describe 'user API', type: :request do
     it 'can send user information' do
       post '/graphql', params: { query: query}
 
+      expect(response).to be_successful
+
       user = JSON.parse(response.body, symbolize_names: true)
 
       expect(user[:data][:user]).to have_key(:nickname)
@@ -47,6 +49,8 @@ describe 'sad path' do
   it 'will not send information for a user that does not exist' do
     post '/graphql', params: { query: query}
 
+    expect(response).to be_successful
+
     error = JSON.parse(response.body, symbolize_names: true)
 
     expect(error).to have_key(:errors)
@@ -69,6 +73,8 @@ describe 'sad path' do
 
   it 'will not send information for a user when there is a syntax error in the request' do
     post '/graphql', params: { query: syntax_error}
+
+    expect(response).to be_successful
 
     error = JSON.parse(response.body, symbolize_names: true)
 
