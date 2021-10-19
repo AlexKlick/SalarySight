@@ -387,7 +387,7 @@ Status: 200 OK
       "createPost": {
         "post": {
           "company": "Example Company",
-          "salary: 100000,
+          "salary": 100000,
           "previousEducation": "Four Year Degree",
           "devTitle": "Staff Engineer",
           "state": "Colorado",
