@@ -3,6 +3,6 @@ FactoryBot.define do
     nickname { Faker::Name.name   }
     email { Faker::Internet.email }
     image_url { Faker::Internet.url  }
-    token { Faker::String.random(length: 24) }
+    token { Faker::Lorem.characters(number: 16) }
   end
 end
