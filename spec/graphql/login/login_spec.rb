@@ -2,7 +2,7 @@ require 'rails_helper'
 
  RSpec.describe 'login api', type: :request do
    before(:each) do
-     @code = "8ad3d15881c331f37229"
+     @code = "9d06ebfcec574c793c1e"
    end
 
    it 'can create a new user from a github code', :vcr do

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://github.com/login/oauth/access_token?client_id=03061f342b90340a4ce6&client_secret=2cafea8b62f89e003846f2ee80ad18bc2a7e9f9b&code=8ad3d15881c331f37229
+    uri: https://github.com/login/oauth/access_token?client_id=03061f342b90340a4ce6&client_secret=2cafea8b62f89e003846f2ee80ad18bc2a7e9f9b&code=9d06ebfcec574c793c1e
     body:
       encoding: UTF-8
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Tue, 19 Oct 2021 04:06:58 GMT
+      - Tue, 19 Oct 2021 17:21:34 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -34,7 +34,7 @@ http_interactions:
       Permissions-Policy:
       - interest-cohort=()
       Etag:
-      - W/"5747188617c29effdbe59dc7ac33489a"
+      - W/"98a3eb03e540928ed48af7956b57df3c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       Strict-Transport-Security:
@@ -65,11 +65,11 @@ http_interactions:
         script-src github.githubassets.com; style-src ''unsafe-inline'' github.githubassets.com;
         worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/'
       X-Github-Request-Id:
-      - D1C4:87B4:6E64F2:960A65:616E4461
+      - D996:1C23:A8284D:CB75A3:616EFE9E
     body:
       encoding: ASCII-8BIT
-      string: '{"access_token":"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","token_type":"bearer","scope":""}'
-  recorded_at: Tue, 19 Oct 2021 04:06:58 GMT
+      string: '{"access_token":"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","token_type":"bearer","scope":""}'
+  recorded_at: Tue, 19 Oct 2021 17:21:34 GMT
 - request:
     method: get
     uri: https://api.github.com/user
@@ -78,7 +78,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer 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
       User-Agent:
       - Faraday v1.8.0
       Accept-Encoding:
@@ -93,7 +93,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Tue, 19 Oct 2021 04:06:58 GMT
+      - Tue, 19 Oct 2021 17:21:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -104,7 +104,7 @@ http_interactions:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding, Accept, X-Requested-With
       Etag:
-      - W/"6815dd4da88512fa7062803b97fa63ee6ee5f552e184bbd679da69b5a0e7ad08"
+      - W/"19a528c7956d394bd6f8efb7efa925014836e306902d4205baea588634262e71"
       Last-Modified:
       - Sat, 16 Oct 2021 21:57:22 GMT
       X-Oauth-Scopes:
@@ -112,7 +112,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Oauth-Client-Id:
-      - 03061f342b90340a4ce6
+      - 
       X-Github-Media-Type:
       - github.v3; format=json
       X-Ratelimit-Limit:
@@ -120,7 +120,7 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '4999'
       X-Ratelimit-Reset:
-      - '1634620018'
+      - '1634667695'
       X-Ratelimit-Used:
       - '1'
       X-Ratelimit-Resource:
@@ -145,11 +145,11 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - D1C5:6675:36314B7:38DEBFD:616E4462
+      - D997:5BAF:3E7CB4:5E8EBE:616EFE9F
     body:
       encoding: ASCII-8BIT
       string: '{"login":"matttoensing","id":80132364,"node_id":"MDQ6VXNlcjgwMTMyMzY0","avatar_url":"https://avatars.githubusercontent.com/u/80132364?v=4","gravatar_id":"","url":"https://api.github.com/users/matttoensing","html_url":"https://github.com/matttoensing","followers_url":"https://api.github.com/users/matttoensing/followers","following_url":"https://api.github.com/users/matttoensing/following{/other_user}","gists_url":"https://api.github.com/users/matttoensing/gists{/gist_id}","starred_url":"https://api.github.com/users/matttoensing/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/matttoensing/subscriptions","organizations_url":"https://api.github.com/users/matttoensing/orgs","repos_url":"https://api.github.com/users/matttoensing/repos","events_url":"https://api.github.com/users/matttoensing/events{/privacy}","received_events_url":"https://api.github.com/users/matttoensing/received_events","type":"User","site_admin":false,"name":"Matt
         Toensing","company":null,"blog":"","location":"Denver, CO","email":null,"hireable":null,"bio":"BE
         Engineer","twitter_username":null,"public_repos":39,"public_gists":4,"followers":4,"following":2,"created_at":"2021-03-05T22:29:29Z","updated_at":"2021-10-16T21:57:22Z"}'
-  recorded_at: Tue, 19 Oct 2021 04:06:58 GMT
+  recorded_at: Tue, 19 Oct 2021 17:21:35 GMT
 recorded_with: VCR 6.0.0
