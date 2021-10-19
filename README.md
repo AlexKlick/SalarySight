@@ -278,7 +278,7 @@ POST      | `/graphql`    | `createPost`      | Create a New Post               
 
 ### Create User
 
-Create a new user with a GitHub authentication code. 
+Create a new user with a GitHub authentication code. The code is the only mutation argument to be inputted into the query. 
 
 ```graphql
     mutation {
