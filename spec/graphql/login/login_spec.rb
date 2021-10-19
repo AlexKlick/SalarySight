@@ -50,7 +50,6 @@ require 'rails_helper'
        }) {
          user {
        nickname
-       email
        imageUrl
        token
       }
