@@ -12,6 +12,7 @@ module Types
     def posts
       Post.all
     end
+
     def user(id:)
       User.find(id)
     end
