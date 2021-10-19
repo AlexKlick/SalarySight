@@ -16,7 +16,6 @@ class GithubService
   def self.get_user_information(access_token)
     headers = {'Authorization' => "Bearer #{access_token}"}
     response = conn(url: 'https://api.github.com', headers: headers).get('/user')
-
     JSON.parse(response.body,symbolize_names: true)
   end
 end
