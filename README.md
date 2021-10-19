@@ -190,10 +190,10 @@ Status: 200 OK
               "jobHuntDuration": 1,
               "gender": 0,
               "age": 29,
-              "yearsOfExperience": 1
-              "yearGraduated": "2019"
-              "typeOfEmployment": "Full Time"
-              "locationOfEmployment": "Denver"
+              "yearsOfExperience": 1,
+              "yearGraduated": "2019",
+              "typeOfEmployment": "Full Time",
+              "locationOfEmployment": "Denver",
               "negotiation": 1
             },
             {
@@ -206,10 +206,10 @@ Status: 200 OK
               "jobHuntDuration": 1,
               "gender": 1,
               "age": 26,
-              "yearsOfExperience": 0
-              "yearGraduated": "2020"
-              "typeOfEmployment": "Full Time"
-              "locationOfEmployment": "Salt Lake"
+              "yearsOfExperience": 0,
+              "yearGraduated": "2020",
+              "typeOfEmployment": "Full Time",
+              "locationOfEmployment": "Salt Lake",
               "negotiation": 0
              }
          ]
