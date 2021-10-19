@@ -280,7 +280,6 @@
           1,
           1,
           null,
-          null,
           null
         ]
       },
@@ -381,43 +380,6 @@
           null
         ]
       },
-      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/login_type.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "branches": {
-        }
-      },
-      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/mutations/login.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "branches": {
-        }
-      },
       "/Users/matttoensing/turing/4module/projects/SalarySight/app/controllers/api/v1/sessions_controller.rb": {
         "lines": [
           0,
@@ -434,6 +396,6 @@
         }
       }
     },
-    "timestamp": 1634616784
+    "timestamp": 1634664123
   }
 }
