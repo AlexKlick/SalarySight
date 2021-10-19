@@ -315,7 +315,7 @@ Status: 200 OK
 "data": {
     "createUser": {
        "user": {  
-          "id": 4
+          "id": 4,
           "nickname": "example nickname",
           "imageUrl": "https://exampleurl.com/example.jpeg",
           "token": "examplegithubtoken"
