@@ -19,6 +19,7 @@ gem 'faker'
 gem 'graphql'
 gem 'rack-cors'
 gem 'figaro'
+gem 'faraday'
 
 group :development, :test do
   gem 'graphiql-rails'
@@ -26,6 +27,8 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov'
   gem 'pry'
+  # gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

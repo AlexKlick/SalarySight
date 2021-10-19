@@ -5,6 +5,5 @@ module Types
     field :email, String, null: true
     field :image_url, String, null: true
     field :token, String, null: true
-    
   end
 end

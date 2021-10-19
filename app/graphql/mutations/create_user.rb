@@ -1,16 +1,16 @@
 module Mutations
   class CreateUser < Mutations::BaseMutation
-    argument :nickname, String, required: true
-    argument :email, String, required: true
-    argument :image_url, String, required: true
-    argument :token, String, required: true
+    argument :code, String, required: false
 
     field :user, Types::UserType, null: false
     field :errors, [String], null: false
 
-    def resolve(nickname:, email:, image_url:, token:)
-      user = User.find_or_create_by(email: email)
-      user.update(nickname: nickname, image_url: image_url, token: token)
+    def resolve(code:)
+      token = GithubService.get_user_access_token(code)
+      user_info = GithubService.get_user_information(token[:access_token])
+
+      user = User.find_or_create_by(nickname: user_info[:login])
+      user.update(image_url: user_info[:avatar_url], token: token[:access_token])
 
       if user.save
         {
