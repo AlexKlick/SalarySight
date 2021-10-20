@@ -41,3 +41,5 @@ RSpec.describe 'posts request API' do
     GQL
   end
 end
+
+      # "medianSalary": 95000

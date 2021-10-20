@@ -4,25 +4,26 @@ module Mutations
     argument :name, String, required: false
     argument :company, String, required: false
     argument :salary, Integer, required: false
-    argument :previous_education, String, required: false
-    argument :dev_title, String, required: false
+    argument :degree, String, required: false
+    argument :position_title, String, required: false
     argument :state, String, required: false
     argument :job_hunt_duration, Integer, required: false
     argument :gender, Integer, required: false
     argument :age, Integer, required: false
     argument :years_of_experience, Integer, required: false
-    argument :year_graduated, String, required: false
+    argument :grad_year, String, required: false
     argument :type_of_employment, String, required: false
     argument :location_of_employment, String, required: false
     argument :negotiation, Integer, required: false
+    argument :first_position, String, required: false
     argument :user_id, ID, required: false
 
     field :post, Types::PostType, null: false
     field :errors, [String], null: false
 
-    def resolve(company:, salary:, previous_education:, dev_title:, state:, job_hunt_duration:, gender:, age:, years_of_experience:, year_graduated:, type_of_employment:, location_of_employment:, negotiation:, user_id:)
+    def resolve(company:, salary:, degree:, position_title:, state:, job_hunt_duration:, gender:, age:, years_of_experience:, grad_year:, type_of_employment:, location_of_employment:, negotiation:, user_id:, first_position:)
 
-      post = Post.create(company: company, salary: salary, previous_education: previous_education, dev_title: dev_title, state: state, job_hunt_duration: job_hunt_duration, gender: gender, age: age, years_of_experience: years_of_experience, year_graduated: year_graduated, type_of_employment: type_of_employment, location_of_employment: location_of_employment, negotiation: negotiation, user_id: user_id)
+      post = Post.create(company: company, salary: salary, degree: degree, position_title: position_title, state: state, job_hunt_duration: job_hunt_duration, gender: gender, age: age, years_of_experience: years_of_experience, grad_year: grad_year, type_of_employment: type_of_employment, location_of_employment: location_of_employment, negotiation: negotiation, first_position: first_position, user_id: user_id)
 
       if post.save
         {
