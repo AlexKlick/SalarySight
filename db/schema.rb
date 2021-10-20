@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_19_014917) do
+ActiveRecord::Schema.define(version: 2021_10_20_233022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,20 +18,24 @@ ActiveRecord::Schema.define(version: 2021_10_19_014917) do
   create_table "posts", force: :cascade do |t|
     t.string "company"
     t.integer "salary"
-    t.string "previous_education"
-    t.string "dev_title"
+    t.string "degree"
+    t.string "position_title"
     t.string "state"
     t.integer "job_hunt_duration"
-    t.integer "gender"
     t.integer "age"
     t.integer "years_of_experience"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "year_graduated"
-    t.string "type_of_employment"
-    t.string "location_of_employment"
+    t.string "grad_year"
     t.integer "negotiation"
     t.bigint "user_id"
+    t.string "username"
+    t.integer "program"
+    t.string "first_position"
+    t.string "position_company"
+    t.integer "type_of_employment"
+    t.integer "location_of_employment"
+    t.string "gender"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
