@@ -117,8 +117,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 HTTP Verb | Endpoint      | Type              | Description                              | Link
 ----------|---------------|-------------------|------------------------------------------|---------------------------
-POST      | `/graphql`    | `Posts`           | Get All Posts          | [Link](#posts)
-POST      | `/graphql`    | `User`            | Get One User           | [Link](#user)
+POST      | `/graphql`    | `Posts`           | Get All Posts                            | [Link](#posts)
+POST      | `/graphql`    | `User`            | Get One User                             | [Link](#user)
+POST      | `/graphql`    | `Salary`          | Get the median of all Salaries           | [Link](#median-salary)
 
 ---
 
@@ -257,6 +258,40 @@ Status: 200 OK
           "email": "example@email.com",
           "imageUrl": "https://exampleurl.com/example.jpeg",
           "token": "examplegithubtoken"
+     }
+ }
+```
+---
+
+### Median Salary
+
+Returns the median of all Salaries in the database.
+
+```graphql
+    salary {
+     medianSalary
+      }
+    }
+```
+
+### Query Attributes
+
+Name        | Data Type | Description
+------------|-----------|-------------------
+`medianSalary` | Integer    | Median Salary
+
+### Example Response
+
+```
+Status: 200 OK
+```
+
+```json
+{ 
+"data": {
+     "salary": {
+          "medianSalary": 90000
+         }
      }
  }
 ```
