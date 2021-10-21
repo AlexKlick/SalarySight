@@ -10,12 +10,12 @@ FactoryBot.define do
     age { 1 }
     years_of_experience { 1 }
     grad_year { "2019" }
-    type_of_employment { "Full Time" }
-    location_of_employment { Faker::Address.city  }
+    type_of_employment { 1 }
+    location_of_employment { 1  }
     negotiation { 1 }
     username { Faker::Name.name }
     program { 1 }
-    first_position { "Engineer" }
+    first_position { 1 }
     position_company { Faker::Company.name }
   end
 end

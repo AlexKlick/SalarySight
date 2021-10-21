@@ -31,6 +31,7 @@ RSpec.describe 'create post api', type: :request do
 
     new_post = Post.last
 
+    expect(new_post.username).to eq("example name")
     expect(new_post.company).to eq("Apple")
     expect(new_post.salary).to eq(100000)
     expect(new_post.degree).to eq("Four Year Degree")
@@ -41,10 +42,10 @@ RSpec.describe 'create post api', type: :request do
     expect(new_post.age).to eq(29)
     expect(new_post.years_of_experience).to eq(2)
     expect(new_post.grad_year).to eq("2019")
-    expect(new_post.type_of_employment).to eq(0)
-    expect(new_post.location_of_employment).to eq("Denver")
-    expect(new_post.negotiation).to eq(1)
-    expect(new_post.first_position).to eq("Engineer")
+    expect(new_post.type_of_employment).to eq("part_time")
+    expect(new_post.location_of_employment).to eq("remote")
+    expect(new_post.negotiation).to eq("true")
+    expect(new_post.first_position).to eq("yes")
   end
 
   def mutation
@@ -52,6 +53,7 @@ RSpec.describe 'create post api', type: :request do
     mutation {
       createPost(input: {
         company: "Apple"
+        username: "example name"
         salary: 100000
         degree: "Four Year Degree"
         positionTitle: "Staff Engineer"
@@ -61,10 +63,11 @@ RSpec.describe 'create post api', type: :request do
         age: 29
         yearsOfExperience: 2
         gradYear: "2019"
-        typeOfEmployment: 0
-        locationOfEmployment: "Denver"
-        negotiation: 1
-        firstPosition: "Engineer"
+        program: "frontend"
+        typeOfEmployment: "part_time"
+        locationOfEmployment: "remote"
+        negotiation: "true"
+        firstPosition: "yes"
         userId: #{@user.id}
         }) {
           post{
