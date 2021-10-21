@@ -46,6 +46,9 @@ RSpec.describe 'create post api', type: :request do
     expect(new_post.location_of_employment).to eq("remote")
     expect(new_post.negotiation).to eq("true")
     expect(new_post.first_position).to eq("yes")
+
+    salary = Salary.last
+    expect(salary.salary).to eq(100000)
   end
 
   def mutation

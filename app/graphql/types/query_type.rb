@@ -5,6 +5,7 @@ module Types
     include GraphQL::Types::Relay::HasNodesField
 
     field :posts, [Types::PostType], null: false
+    field :salary, Types::SalaryType, null: false
     field :user, Types::UserType, null: false do
       argument :id, Integer, required: true
     end
@@ -23,6 +24,10 @@ module Types
 
     def post(id:)
       Post.find(id)
+    end
+
+    def salary
+      Salary.all
     end
   end
 end

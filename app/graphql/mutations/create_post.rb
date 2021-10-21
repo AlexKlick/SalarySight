@@ -26,6 +26,8 @@ module Mutations
 
       post = Post.create(username: username, company: company, salary: salary, degree: degree, position_title: position_title, state: state, job_hunt_duration: job_hunt_duration, gender: gender, age: age, years_of_experience: years_of_experience, grad_year: grad_year, type_of_employment: type_of_employment, location_of_employment: location_of_employment, negotiation: negotiation, first_position: first_position, user_id: user_id, program: program)
 
+      salary = Salary.create(date: DateTime.now.to_s, salary: salary)
+
       if post.save
         {
           post: post
