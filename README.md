@@ -396,10 +396,11 @@ Creates a new salary post.
         userId: <user-id>
         }) {
           post{
+            username
             company
             salary
-            previousEducation
-            devTitle
+            degree
+            positionTitle
             state
             jobHuntDuration
             gender
@@ -409,6 +410,8 @@ Creates a new salary post.
             typeOfEmployment
             locationOfEmployment
             negotiation
+            firstPosition
+            program
           }
         }
       }
