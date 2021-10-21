@@ -33,6 +33,15 @@
           null
         ]
       },
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/models/salary.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/matttoensing/turing/4module/projects/SalarySight/app/models/user.rb": {
         "lines": [
           1,
@@ -79,15 +88,15 @@
           null,
           null,
           1,
-          5,
-          5,
-          5,
-          5,
+          6,
+          6,
+          6,
+          6,
           null,
           null,
           null,
-          5,
-          5,
+          6,
+          6,
           null,
           0,
           0,
@@ -97,7 +106,7 @@
           null,
           null,
           1,
-          5,
+          6,
           null,
           0,
           0,
@@ -109,7 +118,7 @@
           null,
           0,
           null,
-          5,
+          6,
           null,
           0,
           null,
@@ -321,6 +330,8 @@
           null,
           1,
           null,
+          1,
+          null,
           null,
           null,
           0,
@@ -369,14 +380,15 @@
           1,
           1,
           1,
-          null,
-          null,
-          1,
           1,
           null,
           null,
           1,
           1,
+          null,
+          null,
+          1,
+          2,
           null,
           null,
           1,
@@ -385,6 +397,23 @@
           null,
           1,
           0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/matttoensing/turing/4module/projects/SalarySight/app/graphql/types/salary_type.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
           null,
           null,
           null
@@ -406,6 +435,6 @@
         }
       }
     },
-    "timestamp": 1634776743
+    "timestamp": 1634779210
   }
 }
