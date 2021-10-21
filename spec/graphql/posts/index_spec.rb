@@ -12,13 +12,18 @@ RSpec.describe 'posts request API' do
       expect(post).to have_key('id')
       expect(post).to have_key('company')
       expect(post).to have_key('salary')
-      expect(post).to have_key('previousEducation')
-      expect(post).to have_key('devTitle')
+      expect(post).to have_key('degree')
+      expect(post).to have_key('positionTitle')
       expect(post).to have_key('state')
       expect(post).to have_key('jobHuntDuration')
       expect(post).to have_key('gender')
       expect(post).to have_key('age')
       expect(post).to have_key('yearsOfExperience')
+      expect(post).to have_key('typeOfEmployment')
+      expect(post).to have_key('gradYear')
+      expect(post).to have_key('locationOfEmployment')
+      expect(post).to have_key('negotiation')
+      expect(post).to have_key('firstPosition')
     end
   end
 
@@ -29,13 +34,18 @@ RSpec.describe 'posts request API' do
         id
         company
         salary
-        previousEducation
-        devTitle
+        degree
+        positionTitle
         state
         jobHuntDuration
         gender
         age
         yearsOfExperience
+        gradYear
+        typeOfEmployment
+        locationOfEmployment
+        firstPosition
+        negotiation
       }
     }
     GQL

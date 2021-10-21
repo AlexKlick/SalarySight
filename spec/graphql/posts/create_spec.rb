@@ -11,7 +11,7 @@ RSpec.describe 'create post api', type: :request do
     expect(response).to be_successful
 
     post = JSON.parse(response.body, symbolize_names: true)
-require "pry"; binding.pry
+
     expect(post).to have_key(:data)
     expect(post[:data]).to have_key(:createPost)
     expect(post[:data][:createPost]).to have_key(:post)
@@ -33,15 +33,15 @@ require "pry"; binding.pry
 
     expect(new_post.company).to eq("Apple")
     expect(new_post.salary).to eq(100000)
-    expect(new_post.previous_education).to eq("Four Year Degree")
+    expect(new_post.degree).to eq("Four Year Degree")
     expect(new_post.position_title).to eq('Staff Engineer')
     expect(new_post.state).to eq('Colorado')
     expect(new_post.job_hunt_duration).to eq(1)
-    expect(new_post.gender).to eq(1)
+    expect(new_post.gender).to eq("Female")
     expect(new_post.age).to eq(29)
     expect(new_post.years_of_experience).to eq(2)
     expect(new_post.grad_year).to eq("2019")
-    expect(new_post.type_of_employment).to eq("Full Time")
+    expect(new_post.type_of_employment).to eq(0)
     expect(new_post.location_of_employment).to eq("Denver")
     expect(new_post.negotiation).to eq(1)
     expect(new_post.first_position).to eq("Engineer")
@@ -57,11 +57,11 @@ require "pry"; binding.pry
         positionTitle: "Staff Engineer"
         state: "Colorado"
         jobHuntDuration: 1
-        gender: 1
+        gender: "Female"
         age: 29
         yearsOfExperience: 2
         gradYear: "2019"
-        typeOfEmployment: "Full Time"
+        typeOfEmployment: 0
         locationOfEmployment: "Denver"
         negotiation: 1
         firstPosition: "Engineer"
