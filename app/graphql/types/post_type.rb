@@ -12,11 +12,11 @@ module Types
     field :years_of_experience, Integer, null: false
     field :grad_year, Integer, null: false
     field :username, String, null: false
-    field :program, Integer, null: false
-    field :first_position, Integer, null: false
-    field :type_of_employment, Integer, null: false
-    field :location_of_employment, Integer, null: false
-    field :first_position, Integer, null: false
-    field :negotiation, Integer, null: false
+    field :program, String, null: false
+    field :first_position, String, null: false
+    field :type_of_employment, String, null: false
+    field :location_of_employment, String, null: false
+    field :first_position, String, null: false
+    field :negotiation, String, null: false
   end
 end
