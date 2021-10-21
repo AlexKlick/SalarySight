@@ -155,19 +155,21 @@ Returns all Posts and any attributes included in the query.
 Name        | Data Type | Description
 ------------|-----------|-------------------
 `id`        | BigInt    | ID of Record
+`username`        | String    | Name of Poster
 `company`      | String    | Name of company the poster received a job with (if available)
 `salary`      | Integer    | Starting salary of the position
-`previousEducation`      | String    | Poster's highest education
-`devTitle`      | String    | Title of the position
+`degree`      | String    | Poster's highest education
+`positionTitle`      | String    | Title of the position
 `state`      | String    | State in which the position was acquired
 `jobHuntDuration`      | Integer    | Length in time it took Poster to receive a position
-`gender`      | Integer    | Gender of Poster (Male, Female, Transgender, Non-binary/non-conforming, other, prefer not to say)
+`gender`      | String  | Gender of Poster (Male, Female, Transgender, Non-binary/non-conforming, other, prefer not to say)
 `age`      | Integer    | Age of Poster
 `yearsOfExperience`      | Integer    | Years of Experience for position
 `yearGraduated`      | String  | Year the Poster graduated
 `typeOfEmployment`      | String  | Type of employment received (i.e. full time)
 `locationOfEmployment`      | String  | Location of Position received
-`negotiation`      | Integer  | Yes or No for negotiating offer received
+`negotiation`      | String  | Yes or No for negotiating offer received
+`firstPosition`      | String  | True of False for first position in the industry
 
 
 ### Example Response
@@ -182,36 +184,41 @@ Status: 200 OK
      "posts": [
            {
               "id": "42",
+              "username": "Example Username",
               "company": "Example Company",
               "salary": 100000,
-              "previousEducation": "Four Year Degree",
-              "bootCampType": 1,
-              "devTitle": "Software Engineer",
+              "degree": "Four Year Degree",
+              "positionTitle": "Software Engineer",
               "state": "Colorado",
-              "jobHuntDuration": 1,
-              "gender": 0,
+              "jobHuntDuration": 45,
+              "gender": "Female",
               "age": 29,
               "yearsOfExperience": 1,
-              "yearGraduated": "2019",
+              "program": "backend",
+              "gradYear": "2019",
               "typeOfEmployment": "Full Time",
-              "locationOfEmployment": "Denver",
-              "negotiation": 1
+              "locationOfEmployment": "remote",
+              "negotiation": "true",
+              "firstPosition": "yes"
             },
             {
               "id": "43",
+              "username": "Another Example Username",
               "company": "Another Example Company",
-              "salary": 120000,
-              "previousEducation": "No Degree",
-              "devTitle": "Software Engineer",
+              "salary": 90000,
+              "degree": "No Degree",
+              "positionTitle": "Associate Software Engineer",
               "state": "California",
-              "jobHuntDuration": 1,
-              "gender": 1,
-              "age": 26,
-              "yearsOfExperience": 0,
-              "yearGraduated": "2020",
+              "jobHuntDuration": 90,
+              "gender": "Male",
+              "age": 33,
+              "yearsOfExperience": 1,
+              "program": "frontend",
+              "gradYear": "2020",
               "typeOfEmployment": "Full Time",
-              "locationOfEmployment": "Salt Lake",
-              "negotiation": 0
+              "locationOfEmployment": "hybrid",
+              "negotiation": "true",
+              "firstPosition": "yes"
              }
          ]
      }
@@ -335,9 +342,9 @@ Create a new user with a GitHub authentication code. The code is the only mutati
 Name        | Data Type | Description
 ------------|-----------|-------------------
 `id`        | BigInt    | User ID
-`nickname`      | String    | GitHub Users Account Nickname
-`imageUrl`      | String    | Image URL of GitHub User's Account
-`token`      | String    | Token from GitHub Response
+`nickname`  | String    | GitHub Users Account Nickname
+`imageUrl`  | String    | Image URL of GitHub User's Account
+`token`     | String    | Token from GitHub Response
 
 ### Example Response
 
@@ -367,19 +374,22 @@ Creates a new salary post.
 ```graphql
      mutation {
       createPost(input: {
+        username: "Example Name"
         company: "Example Company"
         salary: 100000
-        previousEducation: "Four Year Degree"
-        devTitle: "Staff Engineer"
+        degree: "Four Year Degree"
+        positionTitle: "Staff Engineer"
         state: "Colorado"
         jobHuntDuration: 1
         gender: 1
         age: 29
         yearsOfExperience: 2
-        yearGraduated: "2019"
+        gradYear: "2019"
+        program: "frontend"
         typeOfEmployment: "Full Time"
-        locationOfEmployment: "Denver"
-        negotiation: 1
+        locationOfEmployment: "remote"
+        negotiation: "true"
+        firstPosition: "yes"
         userId: <user-id>
         }) {
           post{
@@ -401,14 +411,26 @@ Creates a new salary post.
       }
 ```
  
-### Query Attributes
+### Mutation Arguments
 
 Name        | Data Type | Description
 ------------|-----------|-------------------
-`nickname`      | String    | GitHub Users Account Nickname
-`email`      | String    | Email of GitHub User
-`imageUrl`      | String    | Image URL of GitHub User's Account
-`token`      | String    | Token from GitHub Response
+`username`        | String    | Name of Poster
+`company`      | String    | Name of company the poster received a job with (if available)
+`salary`      | Integer    | Starting salary of the position
+`degree`      | String    | Poster's highest education
+`positionTitle`      | String    | Title of the position
+`state`      | String    | State in which the position was acquired
+`jobHuntDuration`      | Integer    | Length in time it took Poster to receive a position
+`gender`      | String  | Gender of Poster (Male, Female, Transgender, Non-binary/non-conforming, other, prefer not to say)
+`age`      | Integer    | Age of Poster
+`yearsOfExperience`      | Integer    | Years of Experience for position
+`yearGraduated`      | String  | Year the Poster graduated
+`typeOfEmployment`      | String  | Type of employment received (i.e. full time)
+`locationOfEmployment`      | String  | Location of Position received
+`negotiation`      | String  | Yes or No for negotiating offer received
+`firstPosition`      | String  | True of False for first position in the industry
+`userId`      | BigInt  | User ID of poster
 
 ### Example Response
 
@@ -421,19 +443,22 @@ Status: 200 OK
   "data": {
       "createPost": {
         "post": {
+          "username": "Example Name"
           "company": "Example Company",
           "salary": 100000,
-          "previousEducation": "Four Year Degree",
-          "devTitle": "Staff Engineer",
+          "degree": "Four Year Degree",
+          "positionTitle": "Staff Engineer",
           "state": "Colorado",
           "jobHuntDuration": 1,
           "gender": 1,
           "age": 29,
           "yearsOfExperience": 2,
-          "yearGraduated": 2019,
-          "typeOfEmployment": 0,
-          "locationOfEmployment": 0,
-          "negotiation": 1
+          "gradYear": "2019"
+          "program": "frontend"
+          "typeOfEmployment": "Full Time"
+          "locationOfEmployment": "remote"
+          "negotiation": "true"
+          "firstPosition": "yes"
           }
        }
     }
