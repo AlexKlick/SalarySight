@@ -8,11 +8,11 @@ module Mutations
     argument :position_title, String, required: false
     argument :state, String, required: false
     argument :job_hunt_duration, Integer, required: false
-    argument :gender, Integer, required: false
+    argument :gender, String, required: false
     argument :age, Integer, required: false
     argument :years_of_experience, Integer, required: false
     argument :grad_year, String, required: false
-    argument :type_of_employment, String, required: false
+    argument :type_of_employment, Integer, required: false
     argument :location_of_employment, String, required: false
     argument :negotiation, Integer, required: false
     argument :first_position, String, required: false
