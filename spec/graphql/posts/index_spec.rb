@@ -4,8 +4,8 @@ RSpec.describe 'posts request API', type: :request do
   describe 'get all posts' do
     it 'can send a list of post data' do
       user = create(:user)
-      post1 = create(:post, user: user)
-      post2 = create(:post, user: user)
+      post1 = create(:post)
+      post2 = create(:post)
 
       response = SalarySightSchema.execute(query).as_json
 
@@ -56,8 +56,8 @@ RSpec.describe 'posts request API', type: :request do
   describe 'get all posts with median salary data' do
     it 'can send a list of all post data including median salary data' do
       user = create(:user)
-      post1 = create(:post, user: user)
-      post2 = create(:post, user: user)
+      post1 = create(:post)
+      post2 = create(:post)
 
       post '/graphql', params: { query: query }
 

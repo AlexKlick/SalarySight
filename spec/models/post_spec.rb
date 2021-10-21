@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Post do
-  describe 'relationships' do
-    it { should belong_to(:user) }
-  end
+  # describe 'relationships' do
+  #   it { should belong_to(:user) }
+  # end
 
   describe 'validations' do
     it { should validate_presence_of(:gender) }
