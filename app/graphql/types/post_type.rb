@@ -16,7 +16,7 @@ module Types
     field :first_position, Integer, null: false
     field :type_of_employment, Integer, null: false
     field :location_of_employment, Integer, null: false
-    field :first_position, String, null: false
+    field :first_position, Integer, null: false
     field :negotiation, Integer, null: false
   end
 end
