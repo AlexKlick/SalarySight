@@ -130,22 +130,25 @@ POST      | `/graphql`    | `Salary`          | Get the median of all Salaries  
 Returns all Posts and any attributes included in the query.
 
 ```graphql
-    query {
+   query {
       posts {
         id
+        username
         company
         salary
-        previousEducation
-        devTitle
+        degree
+        positionTitle
         state
         jobHuntDuration
         gender
         age
         yearsOfExperience
-        yearGraduated
+        gradYear
         typeOfEmployment
         locationOfEmployment
+        firstPosition
         negotiation
+        program
       }
     }
 ```
