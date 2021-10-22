@@ -268,6 +268,7 @@ Status: 200 OK
           "email": "example@email.com",
           "imageUrl": "https://exampleurl.com/example.jpeg",
           "token": "examplegithubtoken"
+         }
      }
  }
 ```
@@ -278,6 +279,7 @@ Status: 200 OK
 Returns the median of all Salaries in the database.
 
 ```graphql
+   query {
     salary {
      medianSalary
       }
@@ -395,7 +397,8 @@ Creates a new salary post.
         firstPosition: "yes"
         userId: <user-id>
         }) {
-          post{
+          post {
+            id
             username
             company
             salary
