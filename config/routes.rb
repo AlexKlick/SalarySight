@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   end
 
   post "/graphql", to: "graphql#execute"
-  post "/api/v1/sessions", to: "api/v1/sessions#index"
 end
