@@ -17,14 +17,13 @@ module Mutations
     argument :negotiation, String, required: false
     argument :first_position, String, required: false
     argument :program, String, required: false
-    argument :user_id, ID, required: false
 
     field :post, Types::PostType, null: false
     field :errors, [String], null: false
 
-    def resolve(username:, company:, salary:, degree:, position_title:, state:, job_hunt_duration:, gender:, age:, years_of_experience:, grad_year:, type_of_employment:, location_of_employment:, negotiation:, user_id:, first_position:, program:)
+    def resolve(username:, company:, salary:, degree:, position_title:, state:, job_hunt_duration:, gender:, age:, years_of_experience:, grad_year:, type_of_employment:, location_of_employment:, negotiation:, first_position:, program:)
 
-      post = Post.create(username: username, company: company, salary: salary, degree: degree, position_title: position_title, state: state, job_hunt_duration: job_hunt_duration, gender: gender, age: age, years_of_experience: years_of_experience, grad_year: grad_year, type_of_employment: type_of_employment, location_of_employment: location_of_employment, negotiation: negotiation, first_position: first_position, user_id: user_id, program: program)
+      post = Post.create(username: username, company: company, salary: salary, degree: degree, position_title: position_title, state: state, job_hunt_duration: job_hunt_duration, gender: gender, age: age, years_of_experience: years_of_experience, grad_year: grad_year, type_of_employment: type_of_employment, location_of_employment: location_of_employment, negotiation: negotiation, first_position: first_position, program: program)
 
       salary = Salary.create(date: DateTime.now.to_s, salary: salary)
 

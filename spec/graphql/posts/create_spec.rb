@@ -71,7 +71,6 @@ RSpec.describe 'create post api', type: :request do
         locationOfEmployment: "remote"
         negotiation: "true"
         firstPosition: "yes"
-        userId: #{@user.id}
         }) {
           post{
             company
