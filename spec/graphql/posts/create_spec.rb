@@ -11,7 +11,7 @@ RSpec.describe 'create post api', type: :request do
     expect(response).to be_successful
 
     post = JSON.parse(response.body, symbolize_names: true)
-require "pry"; binding.pry
+
     expect(post).to have_key(:data)
     expect(post[:data]).to have_key(:createPost)
     expect(post[:data][:createPost]).to have_key(:post)
