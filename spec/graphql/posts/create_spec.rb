@@ -42,7 +42,7 @@ RSpec.describe 'create post api', type: :request do
     expect(new_post.age).to eq(29)
     expect(new_post.years_of_experience).to eq(2)
     expect(new_post.grad_year).to eq("2019")
-    expect(new_post.type_of_employment).to eq("part_time")
+    expect(new_post.type_of_employment).to eq("part time")
     expect(new_post.location_of_employment).to eq("remote")
     expect(new_post.negotiation).to eq("true")
     expect(new_post.first_position).to eq("yes")
@@ -67,7 +67,7 @@ RSpec.describe 'create post api', type: :request do
         yearsOfExperience: 2
         gradYear: "2019"
         program: "frontend"
-        typeOfEmployment: "part_time"
+        typeOfEmployment: "part time"
         locationOfEmployment: "remote"
         negotiation: "true"
         firstPosition: "yes"
