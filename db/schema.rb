@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_22_035007) do
+ActiveRecord::Schema.define(version: 2021_10_23_154212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2021_10_22_035007) do
     t.string "position_title"
     t.string "state"
     t.integer "job_hunt_duration"
-    t.integer "age"
     t.integer "years_of_experience"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -36,6 +35,7 @@ ActiveRecord::Schema.define(version: 2021_10_22_035007) do
     t.integer "first_position"
     t.integer "location_of_employment"
     t.string "negotiation"
+    t.string "age"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
