@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   end
 
   post "/graphql", to: "graphql#execute"
+
+  get '/sessions/new', as: 'login'
+
+  get '/sessions/create', to: 'sessions#create'
 end
