@@ -15,6 +15,6 @@ class Post < ApplicationRecord
 
   enum program: {'BE' => 0, 'FE' => 1}
   enum first_position: {'Yes' => 0, 'No' => 1}
-  enum type_of_employment: {'Part-Time' => 0, 'Full-Time' => 1, 'Contract' => 2, 'Intern/Apprenctice' => 3}
+  enum type_of_employment: {'Part-Time' => 0, 'Full-Time' => 1, 'Contract' => 2, 'Intern/Apprentice' => 3}
   enum location_of_employment: {'In-Person' => 0, 'Hybrid' => 1, 'Remote' => 2}
 end
