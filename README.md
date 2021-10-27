@@ -454,7 +454,7 @@ Status: 200 OK
 1. 😎 Darla Evans - [LinkedIn](https://www.linkedin.com/in/darla-evans/) - [Email](mailto:darlaevans2000@gmail.com) - [GitHub](https://github.com/darlaevans2000) - Phone: 719-717-0114
 2. 😁 Erica Spitz - [LinkedIn](https://www.linkedin.com/in/e-spitz/) - [Email](mailto:ericaspitz522@gmail.com) - [GitHub](https://github.com/e-spitz) - Phone: 502-396-8881
 
-Project Link: [https://github.com/matttoensing/sweater-weather](https://github.com/SalarySight)
+Project Link: [SalarySight](https://github.com/SalarySight)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
