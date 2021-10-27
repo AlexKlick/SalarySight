@@ -440,6 +440,12 @@ Status: 200 OK
 <!-- CONTACT -->
 ## Contact
 
+<div align="center">
+<img src="https://media.giphy.com/media/llKJGxQ1ESmac/giphy.gif" alt="Logo" width="250" height="250">
+ </div>
+
+
+
 ### Backend Engineers
 1. 😃 Matt Toensing - [LinkedIn](https://linkedin.com/in/matt-toensing/) - [Email](mailto:matthew.toensing@gmail.com) - [GitHub](https://github.com/matttoensing) - [@instagram](https://www.instagram.com/matt_rtoensing/)
 2. 🤓 Alex Klick - [LinkedIn](https://linkedin.com/in/matt-toensing/) - [Email](mailto:matthew.toensing@gmail.com) - [GitHub](https://github.com/matttoensing) - [@instagram](https://www.instagram.com/matt_rtoensing/)
