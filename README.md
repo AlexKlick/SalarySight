@@ -135,7 +135,7 @@ POST      | `/graphql`    | `Salary`          | Get the median of all Salaries  
 
 Returns all Posts and any attributes included in the query.
 
-```ruby
+```graphql
    query {
       posts {
         id
