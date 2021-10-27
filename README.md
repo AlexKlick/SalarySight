@@ -110,7 +110,7 @@ In order to run this application locally, you will need
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-The best way to query data is to use [Postman](https://www.postman.com/). If you do not have Postman installed, download it to get started. Open Postman to begin a query, and open a new tab to get started. Within the tab, change the HTTP method in the drop down menu on the upper left to `POST`. In the `Enter request URL` section, enter `http://localhost:3000//graphql`. Fire up the server locally by running `rails s` or `rails server` from the command line.
+The best way to query data is to use [Postman](https://www.postman.com/). If you do not have Postman installed, download it to get started. Open Postman to begin a query, and open a new tab to get started. Within the tab, change the HTTP method in the drop down menu on the upper left to `POST`. In the `Enter request URL` section, enter `http://localhost:3000/graphql`. Fire up the server locally by running `rails s` or `rails server` from the command line.
 
 Now we can setup a GraphQL mutation. Under the `URL` section, click on `Body`. This opens a window where text can be entered to send through the body of a request. Now, on the middle navbar, below `URL`, click the `GraphQL` checkbox. This opens a query section to enter GraphQL queries. Using the tables below as a reference, enter your query on the left window, and when ready, click on the blue `Send` button on the upper left part of the screen to send the request to the server. 
 
@@ -460,7 +460,10 @@ Project Link: [https://github.com/matttoensing/sweater-weather](https://github.c
 
 
 * [Turing School of Software and Design](https://turing.edu/)
+* GitHub ![Alt Text](https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif)
 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+https://media.giphy.com/media/12pJ8OxSWwO86Y/giphy.gif
