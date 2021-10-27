@@ -77,31 +77,31 @@ In order to run this application locally, you will need
 ### Installation
 
 1. Clone the repo
-   ```ruby
+   ```
    git clone git@github.com:SalarySight/SalarySight-BE.git
    ```
 2. Change directory
-   ```ruby
+   ```
    cd SalarySight
    ```
 3. Install gems
-   ```ruby
+   ```
    bundle install
    ```
 4. Create local DB
-   ```ruby
+   ```
    rails db:create
    rails db:migrate
    ```
 5. This application uses Oauth through GitHub to authenticate users. Please see the Github docs [here](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) to recieve your own client id and client secret from GitHub. Install [figaro](https://github.com/laserlemon/figaro) by running this command.
-  ```ruby
-  bundle exec figaro install 
-  ```
+   ```
+   bundle exec figaro install 
+   ```
 6. Enter your Oauth client id and client secret in the newly created `config/application.yml` file
-  ```ruby
-   client_id: <client-id goes here>
-   client_secret: <client-secret goes here>
-  ```
+    ```
+    client_id: <client-id goes here>
+    client_secret: <client-secret goes here>
+    ```
    
 <p align="right">(<a href="#top">back to top</a>)</p>
 
