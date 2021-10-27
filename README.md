@@ -460,7 +460,12 @@ Project Link: [https://github.com/matttoensing/sweater-weather](https://github.c
 
 
 * [Turing School of Software and Design](https://turing.edu/)
-* GitHub ![Alt Text](https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif)
+* GitHub 
+
+<div align="center">
+<img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" alt="Logo" width="250" height="250">
+ </div>
+
 
 
 
