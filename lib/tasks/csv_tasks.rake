@@ -1,8 +1,8 @@
 require 'csv'
 
 namespace :csv do
-  task :import_salaries => :environment do
-    CSV.foreach("db/data/salaries.csv", :headers => true) do |row|
+  task import_salaries: :environment do
+    CSV.foreach('db/data/salaries.csv', headers: true) do |row|
       Salary.create!(row.to_hash)
     end
     ActiveRecord::Base.connection.reset_pk_sequence!('customers')
