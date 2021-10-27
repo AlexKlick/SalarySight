@@ -6,7 +6,7 @@ RSpec.describe 'create post api', type: :request do
   end
 
   it 'can create a new post' do
-    post '/graphql', params: {query: mutation}
+    post '/graphql', params: { query: mutation }
 
     expect(response).to be_successful
 
@@ -31,65 +31,65 @@ RSpec.describe 'create post api', type: :request do
 
     new_post = Post.last
 
-    expect(new_post.username).to eq("example name")
-    expect(new_post.company).to eq("Apple")
-    expect(new_post.salary).to eq(100000)
-    expect(new_post.degree).to eq("Four Year Degree")
+    expect(new_post.username).to eq('example name')
+    expect(new_post.company).to eq('Apple')
+    expect(new_post.salary).to eq(100_000)
+    expect(new_post.degree).to eq('Four Year Degree')
     expect(new_post.position_title).to eq('Staff Engineer')
     expect(new_post.state).to eq('CO')
     expect(new_post.job_hunt_duration).to eq(100)
-    expect(new_post.gender).to eq("Female")
-    expect(new_post.age).to eq("25-34")
+    expect(new_post.gender).to eq('Female')
+    expect(new_post.age).to eq('25-34')
     expect(new_post.years_of_experience).to eq(2)
-    expect(new_post.grad_year).to eq("2019")
-    expect(new_post.type_of_employment).to eq("Part-Time")
-    expect(new_post.location_of_employment).to eq("Remote")
-    expect(new_post.negotiation).to eq("true")
-    expect(new_post.first_position).to eq("Yes")
+    expect(new_post.grad_year).to eq('2019')
+    expect(new_post.type_of_employment).to eq('Part-Time')
+    expect(new_post.location_of_employment).to eq('Remote')
+    expect(new_post.negotiation).to eq('true')
+    expect(new_post.first_position).to eq('Yes')
 
     salary = Salary.last
-    expect(salary.salary).to eq(100000)
+    expect(salary.salary).to eq(100_000)
   end
 
   def mutation
     <<~GQL
-    mutation {
-      createPost(input: {
-        company: "Apple"
-        username: "example name"
-        salary: "100000"
-        degree: "Four Year Degree"
-        positionTitle: "Staff Engineer"
-        state: "CO"
-        jobHuntDuration: "100"
-        gender: "Female"
-        age: "25-34"
-        yearsOfExperience: "2"
-        gradYear: "2019"
-        program: "FE"
-        typeOfEmployment: "Part-Time"
-        locationOfEmployment: "Remote"
-        negotiation: "true"
-        firstPosition: "Yes"
-        }) {
-          post{
-            company
-            salary
-            degree
-            positionTitle
-            state
-            jobHuntDuration
-            gender
-            age
-            yearsOfExperience
-            gradYear
-            typeOfEmployment
-            locationOfEmployment
-            firstPosition
-            negotiation
+      mutation {
+        createPost(input: {
+          company: "Apple"
+          username: "example name"
+          salary: "100000"
+          degree: "Four Year Degree"
+          positionTitle: "Staff Engineer"
+          state: "CO"
+          jobHuntDuration: "100"
+          gender: "Female"
+          age: "25-34"
+          yearsOfExperience: "2"
+          gradYear: "2019"
+          program: "FE"
+          typeOfEmployment: "Part-Time"
+          locationOfEmployment: "Remote"
+          negotiation: "true"
+          firstPosition: "Yes"
+          }) {
+            post{
+              company
+              salary
+              degree
+              positionTitle
+              state
+              jobHuntDuration
+              gender
+              age
+              yearsOfExperience
+              gradYear
+              typeOfEmployment
+              locationOfEmployment
+              firstPosition
+              negotiation
+            }
           }
         }
-      }
-      GQL
-    end
+    GQL
   end
+end

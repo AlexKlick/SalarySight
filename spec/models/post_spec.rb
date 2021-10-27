@@ -17,9 +17,9 @@ RSpec.describe Post do
     it { should validate_presence_of(:type_of_employment) }
     it { should validate_presence_of(:location_of_employment) }
     it { should validate_presence_of(:negotiation) }
-    it { should define_enum_for(:program).with(['BE', 'FE']) }
-    it { should define_enum_for(:first_position).with(['Yes', 'No']) }
+    it { should define_enum_for(:program).with(%w[BE FE]) }
+    it { should define_enum_for(:first_position).with(%w[Yes No]) }
     it { should define_enum_for(:type_of_employment).with(['Part-Time', 'Full-Time', 'Contract', 'Intern/Apprentice']) }
-    it { should define_enum_for(:location_of_employment).with(['In-Person', 'Hybrid', 'Remote']) }
+    it { should define_enum_for(:location_of_employment).with(%w[In-Person Hybrid Remote]) }
   end
 end
