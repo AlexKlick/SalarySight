@@ -8,7 +8,7 @@
   <h3 align="center">SalarySight</h3>
 
   <p align="center">
-    An app to checkout BootCamp Grad Salaries
+    Ensuring Turing graduates get the salary they deserve
   </p>
 </div>
 
