@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'salary-sight.herokuapp', 'localhost:3000'
+    origins 'https://salary-sight.herokuapp', 'localhost:3000'
 
     resource '*',
     headers: ["Origin", "Content-Type", "Content-MD5", "Content-Disposition"],
