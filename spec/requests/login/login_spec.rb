@@ -33,5 +33,11 @@ RSpec.describe 'github oauth' do
     get '/sessions/create'
 
     expect(User.count).to eq(1)
+
+    user = User.last
+
+    expect(user.nickname).to eq("matttoensing")
+    expect(user.image_url).to eq("https://avatars.githubusercontent.com/u/80132364?v=4")
+    expect(user.token).to eq("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")
   end
 end

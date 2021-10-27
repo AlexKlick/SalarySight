@@ -1,6 +1,4 @@
 class Post < ApplicationRecord
-  # belongs_to :user
-
   validates :gender, presence: true
   validates :age, presence: true
   validates :grad_year, presence: true
