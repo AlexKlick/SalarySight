@@ -1,12 +1,8 @@
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/SalarySight">
-    <img src="https://user-images.githubusercontent.com/80132364/137375953-5d3e2034-ce5a-403b-94c9-3dd16f804c73.png" alt="Logo" width="120" height="120">
+    <img src="https://user-images.githubusercontent.com/80132364/137375953-5d3e2034-ce5a-403b-94c9-3dd16f804c73.png" alt="Logo" width="250" height="250">
   </a>
 
   <h3 align="center">SalarySight</h3>
@@ -64,6 +60,7 @@ This is a Rails application using GraphQL for the API. Other technologies used t
 Gems used to to build this application:
 * [graphql](https://github.com/rmosolgo/graphql-ruby)
 * [graphiql](https://github.com/rmosolgo/graphiql-rails)
+* [figaro](https://github.com/laserlemon/figaro)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -96,7 +93,16 @@ In order to run this application locally, you will need
    rails db:create
    rails db:migrate
    ```
-
+5. This application uses Oauth through GitHub to authenticate users. Please see the Github docs [here](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) to recieve your own client id and client secret from GitHub. Install [figaro](https://github.com/laserlemon/figaro) by running this command.
+   ```
+   bundle exec figaro install 
+   ```
+6. Enter your Oauth client id and client secret in the newly created `config/application.yml` file
+    ```
+    client_id: <client-id goes here>
+    client_secret: <client-secret goes here>
+    ```
+   
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -104,12 +110,12 @@ In order to run this application locally, you will need
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The best way to query data is to use [Postman](https://www.postman.com/). If you do not have Postman installed, download it to get started. Open Postman to begin a query, and open a new tab to get started. Within the tab, change the HTTP method in the drop down menu on the upper left to `POST`. In the `Enter request URL` section, enter `http://localhost:3000/graphql`. Fire up the server locally by running `rails s` or `rails server` from the command line.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Now we can setup a GraphQL mutation. Under the `URL` section, click on `Body`. This opens a window where text can be entered to send through the body of a request. Now, on the middle navbar, below `URL`, click the `GraphQL` checkbox. This opens a query section to enter GraphQL queries. Using the tables below as a reference, enter your query on the left window, and when ready, click on the blue `Send` button on the upper left part of the screen to send the request to the server. 
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- ROADMAP -->
@@ -163,6 +169,7 @@ Name        | Data Type | Description
 `salary`      | Integer    | Starting salary of the position
 `degree`      | String    | Poster's highest education
 `positionTitle`      | String    | Title of the position
+`program`      | String    | Engineering program the Poster attended in school
 `state`      | String    | State in which the position was acquired
 `jobHuntDuration`      | Integer    | Length in time it took Poster to receive a position
 `gender`      | String  | Gender of Poster (Male, Female, Transgender, Non-binary/non-conforming, other, prefer not to say)
@@ -173,7 +180,6 @@ Name        | Data Type | Description
 `locationOfEmployment`      | String  | Location of Position received
 `negotiation`      | String  | Yes or No for negotiating offer received
 `firstPosition`      | String  | True of False for first position in the industry
-
 
 ### Example Response
 
@@ -218,7 +224,7 @@ Status: 200 OK
               "yearsOfExperience": 1,
               "program": "frontend",
               "gradYear": "2020",
-              "typeOfEmployment": "Full Time",
+              "typeOfEmployment": "Full-Time",
               "locationOfEmployment": "hybrid",
               "negotiation": "true",
               "firstPosition": "yes"
@@ -316,61 +322,11 @@ Status: 200 OK
 
 HTTP Verb | Endpoint      | Mutation          | Description                              | Link
 ----------|---------------|-------------------|------------------------------------------|---------------------------
-POST      | `/graphql`    | `createUser`      | Create a New User                        | [Link](#create-user)
 POST      | `/graphql`    | `createPost`      | Create a New Post                        | [Link](#create-post)
 
 ---
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-### Create User
-
-Create a new user with a GitHub authentication code. The code is the only mutation argument to be inputted into the query. 
-
-```graphql
-    mutation {
-      CreateUser(input: {
-        code: <github-code>
-      }) {
-        user {
-         id
-         nickname
-         imageUrl
-         token
-         }
-     }
-}
-```
- 
-### Query Attributes
-
-Name        | Data Type | Description
-------------|-----------|-------------------
-`id`        | BigInt    | User ID
-`nickname`  | String    | GitHub Users Account Nickname
-`imageUrl`  | String    | Image URL of GitHub User's Account
-`token`     | String    | Token from GitHub Response
-
-### Example Response
-
-```
-Status: 200 OK
-```
-
-```json
-{ 
-"data": {
-    "createUser": {
-       "user": {  
-          "id": 4,
-          "nickname": "example nickname",
-          "imageUrl": "https://exampleurl.com/example.jpeg",
-          "token": "examplegithubtoken"
-         }
-     }
- }
-```
----
 
 ### Create Post
 
@@ -390,12 +346,11 @@ Creates a new salary post.
         age: 29
         yearsOfExperience: 2
         gradYear: "2019"
-        program: "frontend"
-        typeOfEmployment: "Full Time"
-        locationOfEmployment: "remote"
-        negotiation: "true"
-        firstPosition: "yes"
-        userId: <user-id>
+        program: "FE"
+        typeOfEmployment: "Full-Time"
+        locationOfEmployment: "Remote"
+        negotiation: "Yes"
+        firstPosition: "Yes"
         }) {
           post {
             id
@@ -429,17 +384,23 @@ Name        | Data Type | Description
 `salary`      | Integer    | Starting salary of the position
 `degree`      | String    | Poster's highest education
 `positionTitle`      | String    | Title of the position
+`program`      | String    | Engineering program the Poster attended in school (see notes below)
 `state`      | String    | State in which the position was acquired
 `jobHuntDuration`      | Integer    | Length in time it took Poster to receive a position
 `gender`      | String  | Gender of Poster (Male, Female, Transgender, Non-binary/non-conforming, other, prefer not to say)
 `age`      | Integer    | Age of Poster
 `yearsOfExperience`      | Integer    | Years of Experience for position
 `yearGraduated`      | String  | Year the Poster graduated
-`typeOfEmployment`      | String  | Type of employment received (i.e. full time)
-`locationOfEmployment`      | String  | Location of Position received
+`typeOfEmployment`      | String  | Type of employment received (see notes below)
+`locationOfEmployment`      | String  | Location of Position received (see notes below)
 `negotiation`      | String  | Yes or No for negotiating offer received
-`firstPosition`      | String  | True of False for first position in the industry
-`userId`      | BigInt  | User ID of poster
+`firstPosition`      | String  | True of False for first position in the industry (see notes below)
+
+Notes
+- `program` needs to be sent through the request as `BE` for backend or `FE` for frontend
+- `firstPosition` needs to be sent through as either `Yes` or `No`
+- `typeOfEmployment` needs to be sent through as `Part-Time`, `Full-Time`, `Contract`, or `Intern/Apprentice`
+- `locationOfEmployment` needs to be sent through as `In-Person`, `Hybrid`, or `Remote`
 
 ### Example Response
 
@@ -463,11 +424,11 @@ Status: 200 OK
           "age": 29,
           "yearsOfExperience": 2,
           "gradYear": "2019"
-          "program": "frontend"
-          "typeOfEmployment": "Full Time"
-          "locationOfEmployment": "remote"
-          "negotiation": "true"
-          "firstPosition": "yes"
+          "program": "FE"
+          "typeOfEmployment": "Full-Time"
+          "locationOfEmployment": "Remote"
+          "negotiation": "Yes"
+          "firstPosition": "Yes"
           }
        }
     }
@@ -479,9 +440,22 @@ Status: 200 OK
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+<div align="center">
+<img src="https://media.giphy.com/media/llKJGxQ1ESmac/giphy.gif" alt="Logo" width="350" height="250">
+ </div>
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+
+### Backend Engineers
+1. 😃 Matt Toensing - [LinkedIn](https://linkedin.com/in/matt-toensing/) - [Email](mailto:matthew.toensing@gmail.com) - [GitHub](https://github.com/matttoensing) - [@instagram](https://www.instagram.com/matt_rtoensing/)
+2. 🤓 Alex Klick - [LinkedIn](https://linkedin.com/in/matt-toensing/) - [Email](mailto:matthew.toensing@gmail.com) - [GitHub](https://github.com/matttoensing) - [@instagram](https://www.instagram.com/matt_rtoensing/)
+
+### Frontend Engineers
+1. 😎 Darla Evans - [LinkedIn](https://www.linkedin.com/in/darla-evans/) - [Email](mailto:darlaevans2000@gmail.com) - [GitHub](https://github.com/darlaevans2000) - Phone: 719-717-0114
+2. 😁 Erica Spitz - [LinkedIn](https://www.linkedin.com/in/e-spitz/) - [Email](mailto:ericaspitz522@gmail.com) - [GitHub](https://github.com/e-spitz) - Phone: 502-396-8881
+
+Project Link: [SalarySight](https://github.com/SalarySight)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -490,18 +464,17 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [Turing School of Software and Design](https://turing.edu/)
+* GitHub 
+
+<div align="center">
+<img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" alt="Logo" width="250" height="250">
+ </div>
+
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+https://media.giphy.com/media/12pJ8OxSWwO86Y/giphy.gif

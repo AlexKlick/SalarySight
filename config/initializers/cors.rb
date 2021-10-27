@@ -10,7 +10,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     origins 'https://salary-sight.herokuapp', 'localhost:3000'
 
     resource '*',
-    headers: ["Origin", "Content-Type", "Content-MD5", "Content-Disposition"],
-    methods: [:get, :post, :put, :patch, :delete, :options, :head]
+             headers: %w[Origin Content-Type Content-MD5 Content-Disposition],
+             methods: %i[get post put patch delete options head]
   end
 end

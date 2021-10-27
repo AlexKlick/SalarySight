@@ -30,25 +30,25 @@ RSpec.describe 'posts request API', type: :request do
 
     def query
       <<~GQL
-      query {
-        posts {
-          id
-          company
-          salary
-          degree
-          positionTitle
-          state
-          jobHuntDuration
-          gender
-          age
-          yearsOfExperience
-          gradYear
-          typeOfEmployment
-          locationOfEmployment
-          firstPosition
-          negotiation
+        query {
+          posts {
+            id
+            company
+            salary
+            degree
+            positionTitle
+            state
+            jobHuntDuration
+            gender
+            age
+            yearsOfExperience
+            gradYear
+            typeOfEmployment
+            locationOfEmployment
+            firstPosition
+            negotiation
+          }
         }
-      }
       GQL
     end
   end
@@ -89,28 +89,28 @@ RSpec.describe 'posts request API', type: :request do
 
     def query
       <<~GQL
-      query {
-        posts {
-          id
-          company
-          salary
-          degree
-          positionTitle
-          state
-          jobHuntDuration
-          gender
-          age
-          yearsOfExperience
-          gradYear
-          typeOfEmployment
-          locationOfEmployment
-          firstPosition
-          negotiation
+        query {
+          posts {
+            id
+            company
+            salary
+            degree
+            positionTitle
+            state
+            jobHuntDuration
+            gender
+            age
+            yearsOfExperience
+            gradYear
+            typeOfEmployment
+            locationOfEmployment
+            firstPosition
+            negotiation
+          }
+          salary {
+          medianSalary
+           }
         }
-        salary {
-        medianSalary
-         }
-      }
       GQL
     end
   end

@@ -6,6 +6,6 @@ class SessionsController < ApplicationController
     user = User.find_or_create_by(nickname: user_info[:login])
     user.update(image_url: user_info[:avatar_url], token: token[:access_token])
 
-    redirect_to "http://localhost:3000/#{user.nickname}"
+    redirect_to "https://salary-sight.herokuapp.com/#{user.nickname}"
   end
 end
