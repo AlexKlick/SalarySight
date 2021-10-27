@@ -4,8 +4,6 @@
       "/Users/matttoensing/turing/4module/projects/SalarySight/app/models/post.rb": {
         "lines": [
           1,
-          null,
-          null,
           1,
           1,
           1,
@@ -44,10 +42,7 @@
       "/Users/matttoensing/turing/4module/projects/SalarySight/app/models/user.rb": {
         "lines": [
           1,
-          null,
-          null,
           1,
-          null,
           1,
           1,
           null
@@ -402,6 +397,6 @@
         ]
       }
     },
-    "timestamp": 1635299126
+    "timestamp": 1635299668
   }
 }
