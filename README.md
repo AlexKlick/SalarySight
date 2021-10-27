@@ -441,7 +441,7 @@ Status: 200 OK
 ## Contact
 
 <div align="center">
-<img src="https://media.giphy.com/media/llKJGxQ1ESmac/giphy.gif" alt="Logo" width="250" height="250">
+<img src="https://media.giphy.com/media/llKJGxQ1ESmac/giphy.gif" alt="Logo" width="350" height="250">
  </div>
 
 
