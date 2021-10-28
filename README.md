@@ -84,7 +84,7 @@ In order to run this application locally, you will need
    ```
 2. Change directory
    ```
-   cd SalarySight
+   cd SalarySight-BE
    ```
 3. Install gems
    ```
