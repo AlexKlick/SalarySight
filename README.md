@@ -448,11 +448,11 @@ Status: 200 OK
 
 ### Backend Engineers
 1. 😃 Matt Toensing - [LinkedIn](https://linkedin.com/in/matt-toensing/) - [Email](mailto:matthew.toensing@gmail.com) - [GitHub](https://github.com/matttoensing) - [@instagram](https://www.instagram.com/matt_rtoensing/)
-2. 🤓 Alex Klick - [LinkedIn](https://linkedin.com/in/matt-toensing/) - [Email](mailto:matthew.toensing@gmail.com) - [GitHub](https://github.com/matttoensing) - [@instagram](https://www.instagram.com/matt_rtoensing/)
+2. 🤓 Alex Klick - [LinkedIn](https://linkedin.com/in/matt-toensing/) - [Email](mailto:matthew.toensing@gmail.com) - [GitHub](https://github.com/matttoensing)
 
 ### Frontend Engineers
-1. 😎 Darla Evans - [LinkedIn](https://www.linkedin.com/in/darla-evans/) - [Email](mailto:darlaevans2000@gmail.com) - [GitHub](https://github.com/darlaevans2000) - Phone: 719-717-0114
-2. 😁 Erica Spitz - [LinkedIn](https://www.linkedin.com/in/e-spitz/) - [Email](mailto:ericaspitz522@gmail.com) - [GitHub](https://github.com/e-spitz) - Phone: 502-396-8881
+1. 😎 Darla Evans - [LinkedIn](https://www.linkedin.com/in/darla-evans/) - [Email](mailto:darlaevans2000@gmail.com) - [GitHub](https://github.com/darlaevans2000)
+2. 😁 Erica Spitz - [LinkedIn](https://www.linkedin.com/in/e-spitz/) - [Email](mailto:ericaspitz522@gmail.com) - [GitHub](https://github.com/e-spitz)
 
 Project Link: [SalarySight](https://github.com/SalarySight)
 
@@ -477,4 +477,3 @@ Project Link: [SalarySight](https://github.com/SalarySight)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-https://media.giphy.com/media/12pJ8OxSWwO86Y/giphy.gif
