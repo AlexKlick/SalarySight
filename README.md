@@ -8,7 +8,7 @@
   <h3 align="center">SalarySight</h3>
 
   <p align="center">
-    Ensuring Turing graduates get the salary they deserve
+    Ensuring Turing Graduates get the Salary they Deserve
   </p>
 </div>
 
@@ -43,6 +43,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+
+This project is intented for students at Turing School of Software and Design to use as a reference for comparing job salaries. The overall objective for this project give Turing students the opportunity to share their experience in the hiring process and to ensure students can be confident in negotiating salaries and receiving equality in their job offers. Students can login using their GitHub account and filter data on the front end to see what they deserve in terms on a software engineering salary. If a user has taken an offer with a company, they can post that information which will be included in the data that other users can view. This projects was build in roughly 3 weeks, with a frontend team and a backend team using an agile workflow. Check out the deployed application [here](https://salary-sight.herokuapp.com/). 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
