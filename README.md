@@ -448,7 +448,7 @@ Status: 200 OK
 
 ### Backend Engineers
 1. 😃 Matt Toensing - [LinkedIn](https://linkedin.com/in/matt-toensing/) - [Email](mailto:matthew.toensing@gmail.com) - [GitHub](https://github.com/matttoensing) - [@instagram](https://www.instagram.com/matt_rtoensing/)
-2. 🤓 Alex Klick - [LinkedIn](https://linkedin.com/in/matt-toensing/) - [Email](mailto:matthew.toensing@gmail.com) - [GitHub](https://github.com/matttoensing)
+2. 🤓 Alex Klick - [LinkedIn](https://linkedin.com/in/alex-klick/) - [Email](aklick12@gmail.com) - [GitHub](https://github.com/alexklick)
 
 ### Frontend Engineers
 1. 😎 Darla Evans - [LinkedIn](https://www.linkedin.com/in/darla-evans/) - [Email](mailto:darlaevans2000@gmail.com) - [GitHub](https://github.com/darlaevans2000)
